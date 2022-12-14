@@ -5,6 +5,10 @@
     <link>http://101.34.1.176/tags/</link>
     <description>Recent content in Tags on Krisryang-Sites</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://101.34.1.176/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="http://101.34.1.176/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
