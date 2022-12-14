@@ -15,13 +15,17 @@ jobs:
       - name: Checkout # step的名称，将会在 github action 的控制台中显示
         # 选择一个action，可以理解为若干 steps.run，有利于代码复用
         uses: actions/checkout@master
-        # 安装hugo
+      # !important if use theme with git submodule
+      - name: Update theme
+        # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
+        run: git submodule update --init --recursive
+      # 安装hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.91.2'
           # extended: true
-        # build hugo
+      # build hugo
       - name: Build
         run: hugo --minify
       # 部署到腾讯云服务器
