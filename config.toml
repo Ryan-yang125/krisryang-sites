@@ -1,4 +1,24 @@
 baseURL = 'http://101.34.1.176/'
 languageCode = 'en-us'
-title = 'Krisryang-Sites'
+title = 'uuys-blog'
 theme = 'yinyang'
+# DefaultContentLanguage = "cn"
+
+[author]
+  name = "uuys"
+  homepage = "http://101.34.1.176/"
+
+[params]
+mainSections = ["posts"]
+headTitle = "uuys"
+postHeaderContent = ""
+postFooterContent = "<br/><br/><p>Subscribe to：<a target='_blank' href='https://github.com/Ryan-yang125'>Uuys's Blog</a></p>"
+
+[[params.socials]]
+name = "About Me"
+link = "http://101.34.1.176/"
+
+[[params.socials]]
+name = "Github"
+link = "https://github.com/Ryan-yang125"
+

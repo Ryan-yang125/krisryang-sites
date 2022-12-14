@@ -1,7 +1,7 @@
 ---
-title: "Javascript语言详解-浮点数"
-date: 2020-11-24T19:54:10+08:00
-draft: false
+title: "Javascript的数据类型"
+date: 2020-11-24
+categories: ['Tech']
 ---
 
 > Javascript语言详解，第一篇开始了
