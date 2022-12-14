@@ -1,0 +1,4 @@
+baseURL = 'http://101.34.1.176/'
+languageCode = 'en-us'
+title = 'Krisryang-Sites'
+theme = 'yinyang'
