@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Krisryang-Sites</title>
+    <link>http://101.34.1.176/</link>
+    <description>Recent content on Krisryang-Sites</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Nov 2020 19:54:10 +0800</lastBuildDate><atom:link href="http://101.34.1.176/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript语言详解-浮点数</title>
+      <link>http://101.34.1.176/posts/my-first-hugo-post/</link>
+      <pubDate>Tue, 24 Nov 2020 19:54:10 +0800</pubDate>
+      
+      <guid>http://101.34.1.176/posts/my-first-hugo-post/</guid>
+      <description>Javascript语言详解，第一篇开始了
+1.数据类型 Null, undefined, boolean, number, string, symbol(es6),bigint(es6),object
+1.1 number和bigint number js以64位浮点数(IEEE754)的形式储存number
+转换规则如下： $$ 6.5 = 110.1_2 = 1.1012^4 = -1^0(1+0.101)2^{1025-1023}=(-1)^{sign}(1+fraction)*2^{exponent-1023} $$ 所以$sign=0,exponent=1025=10000000001_2,fraction=1010000..000_2$
+为什么是$exponent-1023$ ?
+因为$2^{11} = 2048$表示范围为$[0,2047]$，而指数部分可能为负，所以使用$e-1023$表示范围转换为$[-1022,1023]$,其中$e \in (0,2047)$，因此js能表示的normal的范围为$[2^{-1022},2^{1023}]$
+当$e == 0$
+$f!=0$，表示subnormal，即比$2^{-1022}$更小的正常数,计算方法为: $$ {\displaystyle (-1)^{\text{sign}}\times 2^{1-1023}\times 0.{\text{fraction}}=(-1)^{\text{sign}}\times 2^{-1022}\times 0.{\text{fraction}}} $$
+$f==0$,表示$0 ||-0$,符号表示趋向的方向 当$e==2047$时
+$f == 0$,表示Infinity和*-Infinity* $f!=0$表示NaN bigint Es6出现的bigint解决了number只能准确表示$[-(2^{53}-1),2^{53}-1]$之间的整数的问题。
+当超过这个范围时，number会出现下面这种情况
+这是因为fraction只有52位，当超过这个范围时，低位会由于空间不足被舍去。
+1.2 null 和 undefined undefined 在一个变量声明且未赋值时由编译器自动赋值，null需要手动赋值表示故意缺少的对象值
+null == undefined//true null === undefined//false typeof(null)//object typeof(undefined)//undefined About typeof()：</description>
+    </item>
+    
+  </channel>
+</rss>
