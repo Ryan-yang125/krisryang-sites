@@ -1,45 +1,32 @@
-# 一个workflow，名为deploy to tengxunyun
-name: deploy to tengxunyun
+name: deploy
 
-on: # 此CI/CD触发时的事件
-  push: # 在代码提交时自动触发
+on:
+  push:
     branches:
       - master
 
-# 一个 CI/CD 的工作流有许多 jobs 组成，比如最典型的 job 是 lint，test，build。
 jobs: 
-  build: # 构建job
-    runs-on: ubuntu-20.04 # 跑workflow的服务器系统
-    steps: # job的一系列动作
-      # 切换分支获取源码
-      - name: Checkout # step的名称，将会在 github action 的控制台中显示
-        # 选择一个action，可以理解为若干 steps.run，有利于代码复用
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
         uses: actions/checkout@master
-      # !important if use theme with git submodule
+      # 如果主题是使用git submodule添加的，必须要！否则构建会失败，但hugo不会报错，只会waring
       - name: Update theme
-        # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
         run: git submodule update --init --recursive
-      # 安装hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.91.2'
           # extended: true
-      # build hugo
       - name: Build
         run: hugo --minify
-      # 部署到腾讯云服务器
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
-            # 本地.ssh文件下的私钥id_rsa，存在secrets的TOKEN中
             SSH_PRIVATE_KEY: ${{ secrets.TOKEN }} 
-            # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
             ARGS: "-avzr --delete" 
-            # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
             SOURCE: "public/" 
-            # 服务器域名
             REMOTE_HOST: ${{ secrets.HOST }}  
             REMOTE_USER: ${{ secrets.USER }} 
-            # 目标目录
             TARGET: ${{ secrets.TARGET }} 
