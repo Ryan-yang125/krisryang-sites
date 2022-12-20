@@ -17,3 +17,8 @@ categories: ['Tech']
 蘇子愀然，正襟危坐，而問客曰：“何爲其然也？”客曰：“‘月明星稀，烏鵲南飛。’此非曹孟德之詩乎？西望夏口，東望武昌，山川相繆，鬱乎蒼蒼，此非孟德之困於周郎者乎？方其破荊州，下江陵，順流而東也，舳艫千里，旌旗蔽空，釃酒臨江，橫槊賦詩，固一世之雄也，而今安在哉？況吾與子漁樵於江渚之上，侶魚蝦而友麋鹿，駕一葉之扁舟，舉匏樽以相屬。寄蜉蝣於天地，渺滄海之一粟。哀吾生之須臾，羨長 江之無窮。挾飛仙以遨遊，抱明月而長終。知不可乎驟得，託遺響於悲風。”
 
 蘇子曰：“客亦知夫水與月乎？逝者如斯，而未嘗往也；盈虛者如彼，而卒莫消長也。蓋將自其變者而觀之，則天地曾不能以一瞬；自其不變者而觀之，則物與我皆無盡也，而又何羨乎！且夫天地之間，物各有主，苟非吾之所有，雖一毫而莫取。惟江上之清風，與山間之明月，耳得之而爲聲，目遇之而成色，取之無禁，用之不竭。是造物者之無盡藏也，而吾與子之所共適。”(共適 一作：共食) 客喜而笑，洗盞更酌。餚核既盡，杯盤狼籍。相與枕藉乎舟中，不知東方之既白。
+Building sites … WARN 2022/12/14 20:14:07 found no layout file for "HTML" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2022/12/14 20:14:07 found no layout file for "HTML" for kind "section": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2022/12/14 20:14:07 found no layout file for "HTML" for kind "home": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2022/12/14 20:14:07 found no layout file for "HTML" for kind "taxonomyTerm": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2022/12/14 20:14:07 found no layout file for "HTML" for kind "taxonomyTerm": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
